@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>javascript function</h2>
+    <p id="demo">결과값</p>
+    <script>
+      function toCelsius(fahrenheit) {
+        return (5 / 9) * (fahrenheit - 32);
+      }
+
+      //body 특정 요소 찾기(요소를 찾는 방법)
+      document.getElementById("demo").innerHTML = toCelsius(77);
+    </script>
+  </body>
+</html>

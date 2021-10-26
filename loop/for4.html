@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--문서의 코드를 지정-->
+    <p id="demo"></p>
+    <script>
+      const cars = ["BMW", "Volvo", "Saab", "Ford", "Audi"];
+
+      let text = "";
+      //향상된 for문과 동일 개념
+      for (let car of cars) {
+        //console.log(i);
+        text += car + "<br>"; //0<br>1<br>....9<br>
+      }
+      document.getElementById("demo").innerHTML = text;
+    </script>
+  </body>
+</html>

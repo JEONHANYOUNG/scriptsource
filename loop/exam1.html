@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //배열에서 최대값과 최소값 찾기
+      let numArr = [54, 273, 586, 32, 57, 103, 312, 2];
+      document.write();
+
+      let max = 0,
+        min = 999;
+
+      // 1번)
+      //  for (var i = 0; i < numArr.length; i++) {
+      //     if (max < numArr[i]) max = numArr[i];
+      //     if (max > numArr[i]) min = numArr[i];
+      //   }
+
+      // 2번)
+      //   for (var i in numArr) {
+      //     if (max < numArr[i]) max = numArr[i];
+      //     if (max > numArr[i]) min = numArr[i];
+      //   }
+
+      // 3번) 전부 동일
+      for (var num of numArr) {
+        if (max < num) max = num;
+        if (min > num) min = num;
+      }
+
+      document.write("최대값 " + max + "<br>");
+      document.write("최소값 " + min + "<br>");
+    </script>
+  </body>
+</html>

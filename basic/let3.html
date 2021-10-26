@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Hoisting : 선언하기 전에 사용(선언 구문이 밑에 나오는 것을 허용)
+      carName = "Volvo";
+      carName2 = "Saab";
+
+      var carName; // 나중에 선언한게 var인데 끌어올려서 사용 가능
+      let carName2; // let은 Hoisting 불가(에러 발생)
+
+      console.log(carName);
+      console.log(carName2);
+    </script>
+  </body>
+</html>

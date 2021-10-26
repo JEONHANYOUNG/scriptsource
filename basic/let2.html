@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var y = 2;
+      let x = 10;
+      {
+        // 블럭 안에서 있는 건 못부르고, 블럭 밖에 있는 것만 부를 수 있음
+        let x = 2;
+        var y = 3;
+      }
+      console.log(y);
+      console.log(x);
+    </script>
+  </body>
+</html>

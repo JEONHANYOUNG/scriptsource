@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 아무도 부르지 않고 스스로 실행하는 함수-->
+    <h2>즉시 실행 함수(self-invoking function</h2>
+    <p id="demo"></p>
+    <script>
+      (function () {
+        let x = "hello!!!";
+        document.getElementById("demo").innerHTML = x;
+      })();
+    </script>
+  </body>
+</html>
