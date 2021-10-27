@@ -7,8 +7,7 @@
     <title>Document</title>
   </head>
   <body>
-    <!-- drive / 데이터 / images / pi_bulbon.gif 이용 -->
-
+    <!-- drive / 데이터 / images / pic_bulbon.gif 이용-->
     <h2>The Light Bulb</h2>
     <button type="button" onclick="bulbOn()">Turn on the light</button>
     <img src="pic_bulboff.gif" alt="" />
@@ -16,11 +15,10 @@
     <script>
       const img = document.querySelector("img");
 
-      function bulbon() {
+      function bulbOn() {
         img.src = "pic_bulbon.gif";
       }
-
-      function bulboff() {
+      function bulbOff() {
         img.src = "pic_bulboff.gif";
       }
     </script>
