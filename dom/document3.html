@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- name : global 속성    -->
+    <ul name="list">
+      <li>List item1</li>
+      <li>List item2</li>
+      <li>List item3</li>
+      <li>List item4</li>
+      <li>List item5</li>
+    </ul>
+    <script>
+      // 1) NodeList
+      let list = document.getElementsByName("list");
+      console.log(list);
+      //forEach 사용 가능
+      list.forEach((element) => {
+        console.log(element.innerText);
+      });
+
+      // 2) HTMLCollection
+      let list1 = document.getElementsByTagName("ul");
+      // forEach 사용불가
+      //   list1.forEach((element) => { // list1.forEach is not a function
+      //     console.log(element.innerText);
+      //   });
+    </script>
+  </body>
+</html>

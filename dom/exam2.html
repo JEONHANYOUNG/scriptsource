@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- drive / 데이터 / images / pi_bulbon.gif 이용 -->
+
+    <h2>The Light Bulb</h2>
+    <button type="button" onclick="bulbOn()">Turn on the light</button>
+    <img src="pic_bulboff.gif" alt="" />
+    <button type="button" onclick="bulbOff()">Turn off the light</button>
+    <script>
+      const img = document.querySelector("img");
+
+      function bulbon() {
+        img.src = "pic_bulbon.gif";
+      }
+
+      function bulboff() {
+        img.src = "pic_bulboff.gif";
+      }
+    </script>
+  </body>
+</html>

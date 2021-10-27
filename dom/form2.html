@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <input type="text" name="num1" id="num1" />
+        +
+        <input type="text" name="num2" id="num2" />
+        =
+        <input type="text" name="result" id="result" size="10" />
+      </div>
+      <button type="button" onclick="process()">더하기</button>
+    </form>
+    <script>
+      function process() {
+        //num1,num2,result 요소 가져오기
+        let num1 = document.querySelector("#num1");
+        let num2 = document.querySelector("#num2");
+        let result = document.querySelector("#result");
+
+        //요소가 가지고 있는 값 가져오기
+        // Number("5"), parseInt("5")
+        let sum = Number(num1.value) + Number(num2.value); //"5"+"4"="54"
+
+        //덧셈을 한 결과를 result에 보여주기
+        result.value = sum;
+      }
+    </script>
+  </body>
+</html>
