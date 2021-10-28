@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <div>
+        <input type="text" />
+      </div>
+      <div>
+        <a href="http://www.naver.com">네이버</a>
+      </div>
+      <div><input type="text" name="username" /></div>
+      <div><input type="password" name="userid" /></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        //속성을 이용할 때 [type='text'] => type은 text를 포함하는 모든 것
+        //input 안에 들어있는 값을 가져올 때
+        //$("[type='text']").val(); //val() == value
+
+        //input 안에 값을 보여줄 때 (모든 text를 지칭하며, text 항목 안에 Hello jQuery!!라고 넣어줌)
+        //document.querySelector("").value = 'Hello jQuery!!'
+        //$("[type='text']").val("Hello jQuery!!"); //val() == value 함수 구현
+
+        //$(":text").val("Hello jQuery!!"); //결과는 똑같다
+        //$(":text:first").val("Hello jQuery!!"); //결과는 똑같다
+        //$(":text:last").val("Hello jQuery!!"); //결과는 똑같다
+        $("a[href^='http']").css("background", "yellow");
+
+        $(":password").css("background", "light gray");
+      });
+    </script>
+  </body>
+</html>

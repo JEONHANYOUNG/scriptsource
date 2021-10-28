@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <h1>인접관계 선택자</h1>
+      <p>내용1</p>
+      <p class="txt">내용2</p>
+      <p>내용3</p>
+      <p>내용4</p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        //내용 1 요소에 테두리를 그리고, 배경색 넣기 => 부모태그를 부르고 몇번째인지 확인 후 부르기
+        //css를 두개 이상 넣을 때, ".css("","") ,css("","");" 세미콜론을 마지막에만 부여
+        //$("#wrap p:nth-child(2)")
+        //  .css("border", "2px solid red")
+        //  .css("background-color", "#0ff");
+
+        $("#wrap .txt") //txt를 기준으로 앞쪽, 뒤쪽 부여 가능
+          .prev() //txt를 기준으로 이전 요소
+          .css("border", "2px solid red")
+          .css("background-color", "#0ff");
+
+        //내용3, 내용4 테두리(점선) 그리고, 배경색 넣기(.txt ~ p => .txt 안에 있는 모든 p를 지칭)
+        $("#wrap .txt ~ p")
+          .nextAll() //txt를 기준으로 모든 요소
+          .css("border", "2px dashed blue")
+          .css("background-color", "green");
+      });
+    </script>
+  </body>
+</html>

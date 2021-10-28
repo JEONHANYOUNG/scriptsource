@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="../dom/paper.png" alt="보자기" />
+    <button type="button" onclick="changeImg()">이미지 변경</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        //버튼 클릭시 이미지 변경
+        $("button").click(function () {
+          //이미지 변경 src, alt 수정
+          const img = $("img");
+          img.attr = ("src", "../dom/rock.png");
+          img.attr = ("alt", "주먹");
+        });
+      });
+    </script>
+  </body>
+</html>
