@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const ko = "kokokoko";
+      const koooo = "kooookoooo";
+
+      // ko+ = k,o (1~무한대)
+      console.log(ko.match(/ko+/));
+      console.log(koooo.match(/ko+/));
+      console.log("");
+
+      // (ko)+ = ko(1~무한대)
+      console.log(ko.match(/(ko)+/));
+      console.log(koooo.match(/(ko)+/));
+      console.log("");
+
+      //괄호는 썼는데 캡쳐는 안함
+      console.log(ko.match(/(?:ko)+/));
+      console.log(koooo.match(/(?:ko)+/));
+      console.log("");
+
+      // \w+ == [A-Za-z0-9_]+ + 캡쳐링
+      // \s == [공백,new line,tab]
+
+      let reg = /(\w+)\s(\w+)/; //캡쳐링의 개념, 괄호를 안 넣어줘도 되는데 재사용의 개념으로 사용하기 위해
+      let str = "John Smith";
+      console.log(str.match(reg));
+      console.log("");
+      let newStr = str.replace(reg, "$2, $1"); // 2번 캡쳐링을 먼저 입력해준 것 (순서 변경)
+      console.log(newStr);
+
+      const input =
+        "Regex pros know the difference between\n" +
+        "<i>greedy</i> and <i>lazy</i> matching."; // i는 이탤릭체 이고 strong 태그로 변환할 때
+
+      let regex = /<i>(.*?)<\/i>/gi;
+      console.log(input.match(regex));
+      console.log(input.replace(regex, "<strong>$1<\/strong>"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Lorem Ipsum dolor sit, amet consectetur adipisicing elit. Doloribus
+      molestias veritatis impedit voluptates, reprehenderit sapiente consectetur
+      deleniti rem suscipit inventore autem eum eius. Ex delectus quaerat
+      molestias excepturi a cupiditate! <br />
+      Lorem Ipsum dolor sit, amet consectetur adipisicing elit. Doloribus
+      molestias veritatis impedit voluptates, reprehenderit sapiente consectetur
+      deleniti rem suscipit inventore autem eum eius. Ex delectus quaerat
+      molestias excepturi a cupiditate! <br />
+      Lorem Ipsum dolor sit, amet consectetur adipisicing elit. Doloribus
+      molestias veritatis impedit voluptates, reprehenderit sapiente consectetur
+      deleniti rem suscipit inventore autem eum eius. Ex delectus quaerat
+      molestias excepturi a cupiditate!
+    </p>
+    <script>
+      //p태그 내용 가져오기
+      let p1 = document.querySelector("p").innerText;
+
+      console.log("g 플래그 사용");
+      // 그냥 /ipsum/을 주면 하나만 찾아주고, 뒤에 g만 넣어주면 ipsum에 해당하는 것을 다 찾아줌(3)
+      // 그냥 /ipsum/을 주면 하나만 찾아주고, 뒤에 g만 넣어주면 ipsum에 해당하는 것을 다 찾아줌(3)
+      // ipsum을 대문자로 바꾸고 실행시키면 null값이 뜨고, "/ipsum/gi"를 넣어주면 3개를 찾아줌
+      console.log(p1.match(/ipsum/g)); //null
+      console.log(/ipsum/g.test(p1)); // false
+      console.log("");
+
+      console.log("gi 플래그 사용");
+      console.log(p1.match(/ipsum/gi)); // 0: "Ipsum" , 1: "Ipsum" , 2: "Ipsum"
+      console.log(/ipsum/gi.test(p1)); // true
+      console.log("");
+
+      console.log("gm 플래그 사용");
+      console.log(p1.match(/$/gm)); // ['', '', '']
+    </script>
+  </body>
+</html>
