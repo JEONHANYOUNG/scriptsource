@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 콜백 함수 : 함수를 매개변수로 전달(순서대로 실행되지 않음)
+      alert("시작");
+      setTimeout(function () {
+        alert("3초가 지났습니다.");
+      }, 3000); // 3000을 제시하면 3초 동안 수행됨
+      alert("마무리"); // 비동기식으로 진행
+    </script>
+  </body>
+</html>

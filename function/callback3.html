@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 선언하기 전에 add를 부르는 것
+      // 끌어올려서 실행시키는 것, 선언
+      // add();
+      // callback();
+
+      // 기명 함수(이름이 있는 함수)
+      // hosting 허용(javascript는 허용)
+      // function add() {}
+      // function add1(a, b) {}
+
+      // 익명 함수
+      // hosting 허용하지 않음
+      // 익명 함수 실행 방법
+      function callTimes(callback) {
+        for (let i = 0; i < 5; i++) {
+          callback(); // 5번 호출하는 개념
+        }
+      }
+
+      const callback = function () {
+        alert("함수 호출");
+      }; // 실행 안됨
+      callback();
+
+      callTimes(callback); // calltimes를 호출하면서 매개변수로 callback이라는 함수를 던지는 것
+    </script>
+  </body>
+</html>
